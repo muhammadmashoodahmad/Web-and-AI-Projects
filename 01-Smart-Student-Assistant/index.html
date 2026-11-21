@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Smart Student Assistant</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-    <script src="script.js"></script>
+
 <body>
 
     <div class="dashboard">
@@ -18,7 +20,7 @@
             <h2>SmartStudy</h2>
 
             <nav>
-                <a href="#" class="active">Dashboard</a>
+                <a href="#dashboard" class="active">Dashboard</a>
                 <a href="#planner">Study Planner</a>
                 <a href="#notes">Notes Manager</a>
                 <a href="#assignments">Assignments</a>
@@ -29,7 +31,7 @@
 
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" id="dashboard">
 
             <header class="topbar">
                 <h1>Dashboard</h1>
@@ -55,54 +57,95 @@
             </section>
 
 
-            <!-- Feature Cards -->
-            <section class="features">
+            <!-- Study Planner -->
+            <section class="feature-card" id="planner">
 
-               
-<div class="feature-card" id="planner">
+                <h2>Study Planner</h2>
 
-    <h3>Study Planner</h3>
+                <p>Plan and manage your daily study activities.</p>
 
-    <p>Plan your daily study activities.</p>
+                <div class="input-group">
 
-    <div class="task-input">
-        <input
-            type="text"
-            id="taskInput"
-            placeholder="Enter your study task..."
-        >
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter your study task..."
+                    >
 
-        <button onclick="addTask()">
-            Add Task
-        </button>
-    </div>
+                    <button onclick="addTask()">
+                        Add Task
+                    </button>
 
-    <ul id="taskList"></ul>
-
-</div>
-
-
-                <div class="feature-card" id="notes">
-                    <h3>Notes Manager</h3>
-                    <p>Organize your important study notes.</p>
                 </div>
 
-                <div class="feature-card" id="assignments">
-                    <h3>Assignment Tracker</h3>
-                    <p>Manage assignments and deadlines.</p>
-                </div>
-
-                <div class="feature-card" id="ai-assistant">
-                    <h3>AI Study Assistant</h3>
-                    <p>Get help with your study questions.</p>
-                </div>
+                <ul id="taskList" class="task-list"></ul>
 
             </section>
+
+
+            <!-- Notes Manager -->
+            <section class="feature-card" id="notes">
+
+                <h2>Notes Manager</h2>
+
+                <p>Write and save your important study notes.</p>
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Enter note title..."
+                >
+
+                <textarea
+                    id="noteContent"
+                    placeholder="Write your notes here..."
+                    rows="5"
+                ></textarea>
+
+                <button onclick="addNote()">
+                    Save Note
+                </button>
+
+                <div id="notesList" class="notes-list"></div>
+
+            </section>
+
+
+            <!-- Assignments -->
+            <section class="feature-card" id="assignments">
+
+                <h2>Assignment Tracker</h2>
+
+                <p>Manage your assignments and deadlines.</p>
+
+                <p class="coming-soon">Coming Soon</p>
+
+            </section>
+
+
+            <!-- AI Assistant -->
+            <section class="feature-card" id="ai-assistant">
+
+                <h2>AI Study Assistant</h2>
+
+                <p>Get help with your study questions.</p>
+
+                <p class="coming-soon">Coming Soon</p>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+                <p>Smart Student Assistant - 2026</p>
+            </footer>
 
         </main>
 
     </div>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
