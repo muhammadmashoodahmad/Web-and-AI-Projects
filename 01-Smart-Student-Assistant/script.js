@@ -12,10 +12,10 @@ function showDate() {
 }
 
 // Add Study Task
+
 function addTask() {
 
     const input = document.getElementById("taskInput");
-
     const taskList = document.getElementById("taskList");
 
     const taskText = input.value.trim();
@@ -27,11 +27,30 @@ function addTask() {
 
     const listItem = document.createElement("li");
 
-    listItem.textContent = taskText;
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+    const taskName = document.createElement("span");
+    taskName.textContent = taskText;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+
+    checkbox.addEventListener("change", function () {
+        taskName.style.textDecoration =
+            checkbox.checked ? "line-through" : "none";
+    });
+
+    deleteButton.addEventListener("click", function () {
+        listItem.remove();
+    });
+
+    listItem.appendChild(checkbox);
+    listItem.appendChild(taskName);
+    listItem.appendChild(deleteButton);
 
     taskList.appendChild(listItem);
 
     input.value = "";
-
 }
 
