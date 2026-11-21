@@ -58,10 +58,29 @@
             <!-- Feature Cards -->
             <section class="features">
 
-                <div class="feature-card" id="planner">
-                    <h3>Study Planner</h3>
-                    <p>Plan your daily study activities.</p>
-                </div>
+               
+<div class="feature-card" id="planner">
+
+    <h3>Study Planner</h3>
+
+    <p>Plan your daily study activities.</p>
+
+    <div class="task-input">
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter your study task..."
+        >
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+</div>
+
 
                 <div class="feature-card" id="notes">
                     <h3>Notes Manager</h3>
