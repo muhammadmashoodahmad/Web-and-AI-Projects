@@ -10,39 +10,86 @@
     <script src="script.js"></script>
 <body>
 
-    <header>
-        <h1>Smart Student Assistant</h1>
-        <p>Your personal study and productivity partner.</p>
-    </header>
+   
+<body>
 
-    <main>
-        <section>
-    <h2>Welcome, Student!</h2>
-    <p>Manage your studies in one place.</p>
+    <div class="dashboard">
 
-    <button onclick="showWelcomeMessage()">
-        Welcome Message
-    </button>
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-    <button onclick="showDate()">
-        Show Today's Date
-    </button>
-</section>
+            <h2>SmartStudy</h2>
 
-        <section>
-            <h2>Our Features</h2>
-            <ul>
-                <li>Study Planner</li>
-                <li>Notes Manager</li>
-                <li>Assignment Tracker</li>
-                <li>AI Study Assistant</li>
-            </ul>
-        </section>
-    </main>
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#planner">Study Planner</a>
+                <a href="#notes">Notes Manager</a>
+                <a href="#assignments">Assignments</a>
+                <a href="#ai-assistant">AI Assistant</a>
+            </nav>
 
-    <footer>
-        <p>Smart Student Assistant - 2026</p>
-    </footer>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <h1>Dashboard</h1>
+                <p>Welcome back, Student!</p>
+            </header>
+
+
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+
+                <h2>Your Personal Study Space</h2>
+
+                <p>Organize your studies and achieve your goals.</p>
+
+                <button onclick="showWelcomeMessage()">
+                    Welcome Message
+                </button>
+
+                <button onclick="showDate()">
+                    Today's Date
+                </button>
+
+            </section>
+
+
+            <!-- Feature Cards -->
+            <section class="features">
+
+                <div class="feature-card" id="planner">
+                    <h3>Study Planner</h3>
+                    <p>Plan your daily study activities.</p>
+                </div>
+
+                <div class="feature-card" id="notes">
+                    <h3>Notes Manager</h3>
+                    <p>Organize your important study notes.</p>
+                </div>
+
+                <div class="feature-card" id="assignments">
+                    <h3>Assignment Tracker</h3>
+                    <p>Manage assignments and deadlines.</p>
+                </div>
+
+                <div class="feature-card" id="ai-assistant">
+                    <h3>AI Study Assistant</h3>
+                    <p>Get help with your study questions.</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 
 </body>
 </html>
